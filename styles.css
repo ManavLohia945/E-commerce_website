@@ -132,6 +132,10 @@ body{
     display: none; /*we dont want to display this code for full screen devices*/
     align-items: center;
 }
+
+#close {
+    display: none; /**we dont want to display the cross btn  for full screen devices*/
+}
 /**********************************************************************************/
 /* home page  */
 #hero{
@@ -234,7 +238,6 @@ body{
     justify-content: space-between;
     padding-top:20px;
     flex-wrap: wrap; /* becoz of this prop of css we break the line after 4 products ie.in a given line only 4 products are shown*/
-    /* position: relative; */
 }
 
 #product1 .pro{
@@ -542,6 +545,13 @@ footer a:hover{
 
 /**********USING MEDIA QUERY TO MAKE WEBSITE RESPONSIVE********/
 @media (max-width:800px) {
+    /* .section-p1 {
+        padding: 40px 40px;
+    } */
+
+    .section-p1 {
+        padding: 0px;
+    }
     #navbar {
         display: flex;
         flex-direction: column; /*we make the items list in column wise */
@@ -566,15 +576,53 @@ footer a:hover{
         margin-bottom: 20px;/*to give spacing between each list*/
     }
 
-    #mobile{
+    #mobile{ /*<!-- this is for ipad screen devices*/
         display: flex;
         align-items: center;
     }
  
-    #mobile i{ /*we five the shopping and outdent icon some styles */
+    #mobile i{ /*we style the shopping and outdent icon some styles */
         color: #1a1a1a;
         font-size: 24px;
         padding-left: 20px;
     }
+
+    #close { /*this is for the close icon*/
+        display: initial; /*becoz when we use display:none for full screen devices 
+                           the cross for ipad size also vanishes so we use this prop*/
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #navbar.close_btn { /*to close our sliding navbar */
+        right:-300px;
+    }
+
+    #remove-bag-icon{
+        display: none;
+    }
+
+    #hero { /*the img we see in full-screen device will be minimized here */
+    
+        height: 70vh;
+        background-position: top 30% right 48%;
+        padding: 0 80px;
+    }
+    /*features of our website*/
+    #feature {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+
+    #feature .fe-box {
+        margin: 15px 15px;
+    } 
+
+    /*featured products*/
+    
 
 }
