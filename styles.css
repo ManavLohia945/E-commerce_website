@@ -231,13 +231,14 @@ body{
 /* products css code **********************************************/
 #product1{
     text-align: center;
+    /* position:-webkit-sticky; */
 }
 
 #product1 .pro-container{
     display: flex;
     justify-content: space-between;
     padding-top:20px;
-    flex-wrap: wrap; /* becoz of this prop of css we break the line after 4 products ie.in a given line only 4 products are shown*/
+    flex-wrap: wrap; /* becoz of this prop of css we break the line after 4 products ie.in a given line only 4 products are shown */
 }
 
 #product1 .pro{
@@ -250,7 +251,8 @@ body{
     box-shadow: 20px 20px 30px rgba(0,0,0,0.02); /* x,y,radius and then color are the values */
     margin: 15px 0; /* first is top-bottom then left-right*/
     transition: 0.2s ease;
-    position: relative;
+    /* position: relative; */
+    /* position: static; */
 }
 
 #product1 .pro:hover{
@@ -292,17 +294,19 @@ body{
 }
 
 #product1 .pro .cart{
-    width: 40px;
+    /* width: 40px;
     height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    background-color: #e8f6ea;
+    line-height: 40px; 
+    border-radius: 50px; 
+    background-color: #e8f6ea; */
     /* font-weight: 500; */
     color:#088178;
-    border:1px solid #cce7d0;
-    position: absolute; /*adding position as aboslute to child elem and relative to it's parent elem to shopping cart icon */ 
+    /* border:1px solid #cce7d0; */
+    padding-left: 240px;
+    padding-bottom: 20px;
+    /* position: absolute; /*adding position as aboslute to child elem and relative to it's parent elem to shopping cart icon 
     bottom: 20px;
-    right:10px;
+    right:10px; */
 }
 
 /********************banner section **************************/
@@ -627,36 +631,24 @@ footer a:hover{
 
 }
 
-#page-header
-{
-    background-image: url(img/banner/b1.jpg);
-    width: 100%;
-    height: 40vh;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    padding: 14px;
-}
-
 /*********************shop page css code*******************/
 /*Shop page */
 #page-header{
     background-image: url("img/banner/b1.jpg");
     width:100%;
-    height: 40vh;
+    height: 50vh;
     background-size: cover;
     display:flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    padding: 14px;
+    padding: 90px;
 }
 #page-header h2,
 #page-header p{
      color:white;
     }
+
 
 #pagination{
         text-align: center;
@@ -745,6 +737,7 @@ footer a:hover{
 #page-header.blog-header
 {
     background-image: url(img/banner/b19.jpg);
+    height:40vh;
 }
 
 #blog
@@ -758,7 +751,7 @@ footer a:hover{
     display: flex;
     align-items: center;
     width: 100%;
-    position: relative;
+    /* position: relative; */
     padding-bottom: 90px;
 }
 
@@ -784,10 +777,10 @@ footer a:hover{
 #blog .blog-details a 
 {
     text-decoration: none;
-    font-size: 11px;
+    font-size: 14px;
     color: black;
     font-weight: 700;
-    position: relative;
+    /* position: relative; */
     transition: 0.3s;
 }
 
@@ -797,9 +790,9 @@ footer a:hover{
     width: 50px;
     height: 1px;
     background-color: black;
-    position: absolute;
+    /* position: absolute;
     top: 4px;
-    right: -60px;
+    right: -60px; */
 }
 
 #blog .blog-details a:hover
@@ -809,13 +802,13 @@ footer a:hover{
 
 #blog .blog-box h1
 {
-    position: absolute;
+    /* position: absolute;
     top: -40px;
-    left: 0;
+    left: 0; */
     font-size: 70px;
     font-weight: 700;
     color: #c9cbce;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 
@@ -830,7 +823,7 @@ footer a:hover{
 #page-header.about-header
 {
     background-image: url(img/about/banner.png);
-    height: 60%;
+    height: 40vh;
 }
 
 #about-head
@@ -841,7 +834,7 @@ footer a:hover{
 
 #about-head img
 {
-    width: 50%;
+    width: 45%;
     height: auto;
 }
 
