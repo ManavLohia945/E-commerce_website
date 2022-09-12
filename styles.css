@@ -631,6 +631,8 @@ footer a:hover{
 
 }
 
+/***********************FOR SMALL SCREEN DEVICES ***********/
+
 /*********************shop page css code*******************/
 /*Shop page */
 #page-header{
@@ -861,4 +863,174 @@ footer a:hover{
     height: 100%;
     border-radius: 20px;
 
+}
+
+/*****************CONTACT PAGE**************************/
+#contact-details{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact-details .details{
+    width:40%;
+}
+
+#contact-details .details span{
+    font-size: 12px;
+}
+
+#contact-details .details h2{
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+
+#contact-details .details h3{
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+
+#contact-details .details li{
+    list-style: none;
+    display:flex;
+    padding:10px 0;
+}
+
+#contact-details .details li i{
+    font-size: 14px;
+    padding-right: 22px;
+}
+
+#contact-details .details li p{
+    margin:0;
+    font-size:14px;
+}
+
+#contact-details .map{
+    width:55%; 
+    height: 400px;
+}
+
+#contact-details .map iframe{
+    width:100%; 
+    height: 100%;
+}
+
+/**************************CART PAGE CSS***********************/
+#cart {
+    overflow-x:auto ;/*this is for medium screen devices wherein we add the scrollig feature*/
+}
+
+#cart table{
+    width:100%;
+    border-collapse: collapse; /*the white line above and below our first row is becoz of this prop*/
+    table-layout: fixed;
+    white-space: nowrap;
+}
+ 
+#cart table img {
+    width: 100px;
+}
+ 
+/*we are using this prop becoz we need to give a diff width for each of these*/
+#cart table td:nth-child(1){ /*this is for the cross button/icon to give*/
+    width: 100px;
+    text-align: center;
+}
+ 
+#cart table td:nth-child(2){ /*this is for the image section*/
+    width: 150px;
+    text-align: center;
+}
+ 
+#cart table td:nth-child(3){ /*for the product section where we specify name of product*/
+    width: 250px;
+    text-align: center;
+}
+ 
+#cart table td:nth-child(4), /*for price,quantity and sub-total section*/
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+    width: 150px;
+    text-align: center;
+}
+ 
+#cart table td:nth-child(5) input { /*this is for the quantity section we are giving a nice padding on each side*/
+                                   /*becoz the default size of the input tag is much more so we minimize that*/
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+ 
+#cart table thead{
+    border: 1px solid #e2e9e1;
+    border-left: none; /*to remove the border provided by table tag by default*/
+    border-right: none;
+} 
+ 
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase; /*to make all the text in uppercase*/
+    font-size: 13px;
+    padding: 18px 0;
+    /* padding-bottom: 20px; */
+}
+
+#cart table tbody tr td{
+    padding-top: 15px;
+}
+
+#cart table tbody td{
+    font-size: 13px;
+}
+
+#cart-add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#coupon{
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+#coupon h3, 
+#subtotal h3{
+    padding-bottom: 15px;
+}
+
+#coupon select {
+    padding: 10px 20px;
+    outline:none;
+    width:40%;
+    margin-right: 10px;
+    border: 1px solid #e2e9e1;
+}
+
+#coupon button,
+#subtotal button{
+    background-color: #088178;
+    color:#fff;
+    padding: 12px 20px;
+}
+
+#subtotal{
+    width:50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+
+#subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#subtotal table td{
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
 }
